@@ -1,0 +1,112 @@
+output_table,grain,position,field_name,data_type,nullable,comparison_rule
+orders,one row per order,1,order_id,string,False,exact after published normalisation
+orders,one row per order,2,source_system_record_id,string,False,exact after published normalisation
+orders,one row per order,3,customer_id,string,False,exact after published normalisation
+orders,one row per order,4,order_timestamp,datetime,False,exact after published normalisation
+orders,one row per order,5,sales_channel,string,False,exact after published normalisation
+orders,one row per order,6,payment_method,string,False,exact after published normalisation
+orders,one row per order,7,currency,string,False,exact after published normalisation
+orders,one row per order,8,nearest_warehouse,string,False,exact after published normalisation
+orders,one row per order,9,order_status,string,False,exact after published normalisation
+orders,one row per order,10,order_price,number,False,numeric tolerance 0.01
+orders,one row per order,11,delivery_charges,number,False,numeric tolerance 0.01
+orders,one row per order,12,coupon_code,string,True,exact after published normalisation
+orders,one row per order,13,coupon_discount,number,False,exact after published normalisation
+orders,one row per order,14,tax_amount,number,False,numeric tolerance 0.01
+orders,one row per order,15,order_total,number,False,numeric tolerance 0.01
+orders,one row per order,16,season,string,False,exact after published normalisation
+orders,one row per order,17,expedited_delivery,boolean,False,exact after published normalisation
+orders,one row per order,18,customer_lat,number,False,exact after published normalisation
+orders,one row per order,19,customer_long,number,False,exact after published normalisation
+orders,one row per order,20,device_type,string,False,exact after published normalisation
+orders,one row per order,21,referral_source,string,False,exact after published normalisation
+orders,one row per order,22,customer_note_clean,string,False,exact after published normalisation
+orders,one row per order,23,promo_code,string,True,exact after published normalisation
+order_items,one row per order item,1,order_item_id,string,False,exact after published normalisation
+order_items,one row per order item,2,order_id,string,False,exact after published normalisation
+order_items,one row per order item,3,product_id,string,False,exact after published normalisation
+order_items,one row per order item,4,quantity,number,False,exact after published normalisation
+order_items,one row per order item,5,unit_price,number,False,numeric tolerance 0.01
+order_items,one row per order item,6,line_revenue,number,False,numeric tolerance 0.01
+customers,one row per customer,1,customer_id,string,False,exact after published normalisation
+customers,one row per customer,2,signup_date,date,False,exact after published normalisation
+customers,one row per customer,3,loyalty_tier,string,False,exact after published normalisation
+customers,one row per customer,4,customer_segment,string,False,exact after published normalisation
+customers,one row per customer,5,age_band,string,False,exact after published normalisation
+customers,one row per customer,6,preferred_channel,string,False,exact after published normalisation
+customers,one row per customer,7,home_suburb,string,False,exact after published normalisation
+customers,one row per customer,8,prior_12m_orders,number,False,exact after published normalisation
+customers,one row per customer,9,lifetime_value_before_period,number,False,numeric tolerance 0.01
+customers,one row per customer,10,marketing_consent,boolean,False,exact after published normalisation
+customers,one row per customer,11,home_postcode,string,False,exact after published normalisation
+customers,one row per customer,12,home_state,string,False,exact after published normalisation
+customers,one row per customer,13,home_country,string,False,exact after published normalisation
+customers,one row per customer,14,preferred_language,string,False,exact after published normalisation
+customers,one row per customer,15,acquisition_source,string,False,exact after published normalisation
+customers,one row per customer,16,account_status,string,False,exact after published normalisation
+customers,one row per customer,17,preferred_device,string,False,exact after published normalisation
+customers,one row per customer,18,email_domain,string,False,exact after published normalisation
+customers,one row per customer,19,household_size_band,string,False,exact after published normalisation
+customers,one row per customer,20,contact_frequency_preference,string,False,exact after published normalisation
+deliveries,one row per completed order,1,delivery_id,string,False,exact after published normalisation
+deliveries,one row per completed order,2,order_id,string,False,exact after published normalisation
+deliveries,one row per completed order,3,dispatch_date,date,False,exact after published normalisation
+deliveries,one row per completed order,4,promised_date,date,False,exact after published normalisation
+deliveries,one row per completed order,5,delivered_date,date,False,exact after published normalisation
+deliveries,one row per completed order,6,carrier,string,False,exact after published normalisation
+deliveries,one row per completed order,7,service_level,string,False,exact after published normalisation
+deliveries,one row per completed order,8,delivery_status,string,False,exact after published normalisation
+deliveries,one row per completed order,9,delay_days,number,False,exact after published normalisation
+deliveries,one row per completed order,10,on_time_in_full,boolean,False,exact after published normalisation
+deliveries,one row per completed order,11,fulfilment_hours,number,False,exact after published normalisation
+deliveries,one row per completed order,12,delivery_cost,number,False,numeric tolerance 0.01
+deliveries,one row per completed order,13,delay_reason,string,False,exact after published normalisation
+deliveries,one row per completed order,14,promised_days,number,False,exact after published normalisation
+deliveries,one row per completed order,15,tracking_event_count,number,False,exact after published normalisation
+deliveries,one row per completed order,16,delivery_window,string,False,exact after published normalisation
+deliveries,one row per completed order,17,shipping_distance_km,number,False,exact after published normalisation
+deliveries,one row per completed order,18,signature_required,boolean,False,exact after published normalisation
+deliveries,one row per completed order,19,estimated_carbon_kg,number,False,exact after published normalisation
+deliveries,one row per completed order,20,delivery_note_clean,string,False,exact after published normalisation
+products,one row per product,1,product_id,string,False,exact after published normalisation
+products,one row per product,2,product_name,string,False,exact after published normalisation
+products,one row per product,3,category,string,False,exact after published normalisation
+products,one row per product,4,brand,string,False,exact after published normalisation
+products,one row per product,5,unit_price,number,False,numeric tolerance 0.01
+products,one row per product,6,unit_cost,number,False,numeric tolerance 0.01
+products,one row per product,7,launch_year,number,False,exact after published normalisation
+products,one row per product,8,warranty_months,number,False,exact after published normalisation
+products,one row per product,9,weight_kg,number,False,exact after published normalisation
+products,one row per product,10,product_sku,string,False,exact after published normalisation
+products,one row per product,11,subcategory,string,False,exact after published normalisation
+products,one row per product,12,model_family,string,False,exact after published normalisation
+products,one row per product,13,colour,string,False,exact after published normalisation
+products,one row per product,14,supplier_id,string,False,exact after published normalisation
+products,one row per product,15,supplier_country,string,False,exact after published normalisation
+products,one row per product,16,launch_date,date,False,exact after published normalisation
+products,one row per product,17,tax_category,string,False,exact after published normalisation
+products,one row per product,18,package_type,string,False,exact after published normalisation
+products,one row per product,19,recyclable_packaging,boolean,False,exact after published normalisation
+products,one row per product,20,active_flag,boolean,False,exact after published normalisation
+products,one row per product,21,product_description_clean,string,False,exact after published normalisation
+product_reviews,one row per canonical review,1,review_id,string,False,exact after published normalisation
+product_reviews,one row per canonical review,2,order_id,string,False,exact after published normalisation
+product_reviews,one row per canonical review,3,order_item_id,string,False,exact after published normalisation
+product_reviews,one row per canonical review,4,product_id,string,False,exact after published normalisation
+product_reviews,one row per canonical review,5,customer_id,string,False,exact after published normalisation
+product_reviews,one row per canonical review,6,review_timestamp,datetime,False,exact after published normalisation
+product_reviews,one row per canonical review,7,language_code,string,False,exact after published normalisation
+product_reviews,one row per canonical review,8,rating,number,False,exact after published normalisation
+product_reviews,one row per canonical review,9,review_title,string,False,exact after published normalisation
+product_reviews,one row per canonical review,10,review_body_clean,string,False,exact after published normalisation
+product_reviews,one row per canonical review,11,review_body_latin_analysis,string,False,exact after published normalisation
+product_reviews,one row per canonical review,12,verified_purchase,boolean,False,exact after published normalisation
+product_reviews,one row per canonical review,13,helpful_votes,number,False,exact after published normalisation
+product_reviews,one row per canonical review,14,review_length_chars,number,False,exact after published normalisation
+product_reviews,one row per canonical review,15,review_word_count,number,False,exact after published normalisation
+product_reviews,one row per canonical review,16,contains_non_latin_script,boolean,False,exact after published normalisation
+product_reviews,one row per canonical review,17,extracted_order_reference,string,False,exact after published normalisation
+product_reviews,one row per canonical review,18,extracted_product_sku,string,False,exact after published normalisation
+product_reviews,one row per canonical review,19,delivery_experience,string,False,exact after published normalisation
+product_reviews,one row per canonical review,20,value_experience,string,False,exact after published normalisation
+product_reviews,one row per canonical review,21,writing_style,string,False,exact after published normalisation
